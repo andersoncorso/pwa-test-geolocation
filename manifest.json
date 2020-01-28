@@ -2,7 +2,7 @@
         "name" : "PWA Geolocation tests",
         "short_name" : "PWA Geo",
         "description" : "For testing only",
-        "start_url" : "index.html",
+        "start_url" : "index.php",
         "lang" : "Portuguese",
         "theme_color": "#317EFB",
         "background_color": "#ffffff",
