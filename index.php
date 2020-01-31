@@ -37,8 +37,11 @@
             <br>
             <strong>Heading: <input type="text" id="heading"><br>    
             <br>
-            <strong>Speed: <input type="text" id="speed"><br>    
+            <strong>Speed: <input type="text" id="speed"><br>   
         </p>
+        <br>
+        <div id="div-map">
+        </div>
     </div>
     
     <script src="main.js"></script>
@@ -99,6 +102,7 @@
             document.getElementById("heading").value = position.coords.heading;
             document.getElementById("speed").value = position.coords.speed;
             document.getElementById("timestamp").value = position.timestamp;
+            showInMap(position);
         }
 
         function showError(error) {
@@ -116,6 +120,15 @@
                     console.error( "An unknown error occurred." );
                     break;
             }
+        }
+
+        function showInMap(position) {
+
+            var latlon = position.coords.latitude + "," + position.coords.longitude;
+            var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&markers=color:red%7Clabel:P%7C"+latlon+"&zoom=18&size=800x600&format=png&sensor=false&key=AIzaSyDoJ_JWEGgfXhvTKxBt5izfIoaguBuYxdg";
+            var map = document.getElementById("div-map");
+            console.log(img_url);
+            map.innerHTML = "<img src='"+img_url+"'>";
         }
 
         //request for location
