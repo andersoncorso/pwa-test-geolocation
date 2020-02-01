@@ -104,7 +104,7 @@
         function showInMap(position) {
             // https://developers.google.com/maps/documentation/maps-static/web-service-best-practices
             var latlon = position.coords.latitude + "," + position.coords.longitude;
-            var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&markers=color:red%7Clabel:P%7C"+latlon+"&zoom=18&size=800x600&format=png&sensor=false&key=AIzaSyDoJ_JWEGgfXhvTKxBt5izfIoaguBuYxdg";
+            var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&markers=color:red%7Clabel:P%7C"+latlon+"&zoom=18&size=380x480&format=png&sensor=false&key=AIzaSyDoJ_JWEGgfXhvTKxBt5izfIoaguBuYxdg";
             var map = document.getElementById("div-map");
             console.log(img_url);
             map.innerHTML = "<img src='"+img_url+"'>";
